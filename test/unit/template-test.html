@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<% //
+// html-webpack-plugin template for test pages
+%>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <link href="./node_modules/mocha/mocha.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h3><%= htmlWebpackPlugin.options.title %></h3>
+
+        <div id="mocha"></div>
+
+        <script src="./node_modules/mocha/mocha.js"></script>
+        <script src="./node_modules/chai/chai.js"></script>
+        <script>mocha.setup('bdd')</script>
+
+        <!-- load test bundles -->
+        <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+            <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+        <% } %>
+
+        <!-- run the tests -->
+        <script>
+            mocha.run();
+        </script>
+
+    </body>
+</html>

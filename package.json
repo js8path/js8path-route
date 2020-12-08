@@ -1,6 +1,6 @@
 {
   "name": "@js8path/js8path-route",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Route calculations for JS8Path",
   "author": {
     "name": "Jeff Kunce, N0JUH",
@@ -26,11 +26,12 @@
     "test:int": "mocha ./test/int/inttest-ALL.js --require @babel/polyfill --require @babel/register"
   },
   "dependencies": {
-    "ajv": "^6.10.0",
     "@js8path/annotated-error": "^1.0.0",
-    "axios": "^0.18.0",
     "@js8path/js8path-data": "^1.0.0",
+    "ajv": "^6.10.0",
+    "axios": "^0.18.0",
     "lodash": "^4.17.10",
+    "maidenhead": "^1.0.7",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
@@ -41,6 +42,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
     "@istanbuljs/nyc-config-babel": "^2.1.1",
+    "@js8path/js8path-test-data": "^1.0.0",
     "axios-mock-adapter": "^1.16.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-istanbul": "^5.1.4",
@@ -48,8 +50,6 @@
     "es6-promise": "^4.2.6",
     "eslint": "^5.16.0",
     "html-webpack-plugin": "^3.2.0",
-    "@js8path/js8path-test-data": "^1.0.0",
-    "maidenhead": "^1.0.7",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "webpack": "^4.32.2",
